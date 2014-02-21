@@ -39,9 +39,10 @@ Partial Class _Default
             taxes = earnings * 0.18
         Else
             taxes = earnings * 0.22
-            'to display results
-            taxResultsLabel.Text = String.Format("{0:C}", taxes)
+
         End If
+        'to display results
+        taxResultsLabel.Text = String.Format("{0:C}", taxes)
         netearnings = earnings - taxes
 
         'display results
@@ -52,6 +53,15 @@ Partial Class _Default
     End Sub
 
     Protected Sub clearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
+        'to clear the textboxes
+        hoursTextBox.Text = ""
+        wageTextBox.Text = ""
+        grossResultsLabel.Text = ""
+        deductionsTextBox.Text = ""
+        earningResultsLabel.Text = ""
+        taxResultsLabel.Text = ""
+        netEarningResultsLabel.Text = ""
+
 
     End Sub
 End Class
